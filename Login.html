@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> DOC Healthtech Login </title>
+  <link rel="icon" href="Images/Logo.png" type="image/x-icon">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+      background: #ffffff;
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      width: 800px; 
+      margin: 32px auto;
+      display: flex;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-container {
+      flex: 1; 
+      background: rgba(233, 241, 250, 0.8);
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .info-container {
+      flex: 1; 
+      background: rgba(233, 241, 250, 0.8); 
+      padding: 40px;
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-family: Arial;
+    }
+    p {
+      font-family: Times New Roman;
+    }
+    input[type="text"],
+    input[type="password"] {
+      font-family: Times New Roman;
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      font-family: Times New Roman;
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    li {
+      font-family: Times New Roman;
+    }
+    .info-container img {
+      height: 220px;
+      width: 330px;
+      margin-top: 20px;
+      border-radius: 10px;
+      align-content: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="form-container"> <!-- Create a separate div for the form -->
+    <img src="Images/Logo.png" alt="&nbsp;Logo" class="logo">
+    <h2><b> DOC Healthtech </b></h2>
+    <p> Web Version: 1.3 </p>
+    <form action="Dashboard.html" method="post">
+      <input type="text" name="username" placeholder="Nurse's/Doctor's Name" required>
+      <input type="password" name="password" placeholder="Access Key" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <div class="info-container">
+    <h3> Good Morning Doc! </h3>
+    <p> New Updates: <b>01/03/2024</b> </p>
+    <li> Enhanced UI System experience. </li>
+    <li> Added gallery for media. </li>
+    <li> Improve software stability. </li>
+    <li> Added slideshow for general infos. </li>
+    <li> Updated the forms for new patient. </li>
+    <img src="Images/Background.png">
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> DOC Healthtech </title>
+  <link rel="icon" href="Images/Logo.png" type="image/x-icon">
+</head>
+
+  <style type="text/css">
+        /* Styles.css */
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Times New Roman;
+      background: #e9f1fa;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+    }
+    h1 {
+      font-family: Arial;
+      font-weight: bolder;
+      color: #223e61;
+      padding-left: 5vh;
+      padding-right: 36vh;
+    }
+    .title p {
+      padding-left: 5vh;
+      color: #223e61;
+    }
+    nav ul {
+      padding-bottom: 8vh;
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 15px;
+    }
+    nav ul li a {
+      font-family: Times New Roman;
+      text-decoration: none;
+      color: #223e61;
+    }
+    h2 {
+      font-family: Arial;
+      font-size: 22pt;
+      font-weight: bolder;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      color: #223e61;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10pt;
+    }
+    footer {
+      font-family: Times New Roman;
+      font-size: 10pt;
+      text-align: center;
+      padding: 10px;
+      background-color: #00abe4;
+      color: white;
+    }
+    /* For slideshow */
+    .slideshow {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      height: 300px;
+      width: 100%;
+    }
+    .slide.active {
+      display: block;
+    }
+    .navigation {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: #bbb;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #00abe4;
+    }
+    /* For other css designs */
+    #mainlogo {
+      height: 100px;
+      width: 100px;
+      float: left;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    #searchbar {
+    font-family: Times New Roman;
+      padding-left: 10px;
+      border: none;
+      border-radius: 180px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      outline: none;
+      margin-left: 10px;
+    }
+    #searchbutton {
+      height: 50px;
+      width: 50px;
+      font-family: Times New Roman;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border: none;
+      border-radius: 180px;
+      float: right;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    #prev, #next {
+      height: 30px;
+      width: 30px;
+      font-weight: bolder;
+      border: none;
+      border-radius: 6pt;
+      background: #00abe4;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    #button1, #button2 {
+      font-family: Times New Roman;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border: none;
+      border-radius: 180px;
+      background-color: #223e61;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    /* For profiles section */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ffffff;
+      padding: 8px;
+      text-align: left;
+      background: #ffffff;
+    }
+    th {
+      background-color: #00abe4;
+      color: #ffffff;
+    }
+    /* CSS for image gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 40px;
+      height: 500px;
+      width: 500px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+    #profiles h2 {
+      font-size: 18pt;
+    }
+  </style>
+  
+<body>
+  
+  <header>
+    <div class="logo">
+      <img id="mainlogo" src="Images/Logo.png" alt="&nbsp;Logo">
+    </div>
+    <div class="title">
+      <h1> DOC Healthtech </h1>
+      <p> Software Version 1.3 </p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Dashboard.html"> Dashboard </a></li>
+        <li><a href="Medication.html"> Medication </a></li>
+        <li><a href="Diagnosis.html"> Diagnosis </a></li>
+        <li>
+          <form action="#" method="get">
+            <input id="searchbar" type="text" placeholder="Search Patients" name="search" required>
+            <button id="searchbutton" type="submit"> <img src="Images/Search.png"> </button>
+          </form>
+        </li>
+        <li><a href="Addnew.html"><button id="button1"> Add </button></a></li>
+        <li><a href="Login.html"><button id="button2"> Log Out </button></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="dashboard">
+      <h2> DASHBOARD </h2>
+        <!-- Slideshow with three slides -->
+      <div class="slideshow">
+        <div class="slide active">
+          <img src="Images/Slide_1.png" alt="&nbsp;Slide 1" onerror="this.style.display='none'">
+        </div>
+        <div class="slide">
+          <img src="Images/Slide_2.png" alt="&nbsp;Slide 2" onerror="this.style.display='none'">
+        </div>
+        <div class="slide">
+          <img src="Images/Slide_3.png" alt="&nbsp;Slide 3" onerror="this.style.display='none'">
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+        <!-- Navigations & indicators -->
+      <div class="navigation">
+        <button id="prev" onclick="prevSlide()"> &lt; </button>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <button id="next" onclick="nextSlide()"> &gt; </button>
+      </div>
+      <center>
+        <div class="gallery">
+          <img src="Images/Image_1.png" alt="Image 1">
+          <img src="Images/Image_2.png" alt="Image 2">
+          <img src="Images/Image_3.png" alt="Image 3">
+          <img src="Images/Image_4.png" alt="Image 4">
+          <img src="Images/Image_5.png" alt="Image 5">
+          <img src="Images/Image_6.png" alt="Image 6">
+          <img src="Images/Image_7.png" alt="Image 7">
+          <img src="Images/Image_8.png" alt="Image 8">
+          <img src="Images/Image_9.png" alt="Image 9">
+        </div>
+    </center>
+    </section>
+    <!-- For other section menu -->
+    <section id="profiles">
+      <h2> Patient's Information </h2>
+      <table>
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Birthdate </th>
+            <th> Age </th>
+            <th> Location </th>
+            <th> Contact </th>
+            <th> Height </th>
+            <th> Weight </th>
+            <th> Blood Type </th>
+            <th> Medical Condition </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> John Doe </td>
+            <td> May 10, 1985 </td>
+            <td> 35 </td>
+            <td> New York </td>
+            <td> +1 123-456-7890 </td>
+            <td> 180 cm </td>
+            <td> 75 kg </td>
+            <td> O+ </td>
+            <td> Hypertension </td>
+          </tr>
+          <tr>
+            <td> Jane Smith </td>
+            <td> February 15, 1994 </td>
+            <td> 28 </td>
+            <td> Los Angeles </td>
+            <td> +1 987-654-3210 </td>
+            <td> 165 cm </td>
+            <td> 60 kg </td>
+            <td> A- </td>
+            <td> Asthma </td>
+          </tr>
+          <tr>
+            <td> Michael Johnson </td>
+            <td> October 5, 1979 </td>
+            <td> 42 </td>
+            <td> Chicago </td>
+            <td> +1 555-123-4567 </td>
+            <td> 175 cm </td>
+            <td> 80 kg </td>
+            <td> B+ </td>
+            <td> Diabetes </td>
+          </tr>
+          <tr>
+            <td> Sarah Williams </td>
+            <td> September 20, 1989 </td>
+            <td> 32 </td>
+            <td> Miami </td>
+            <td> +1 333-777-9999 </td>
+            <td> 160 cm </td>
+            <td> 55 kg </td>
+            <td> AB- </td>
+            <td> Anemia </td>
+          </tr>
+          <tr>
+            <td> David Brown </td>
+            <td> July 12, 1990 </td>
+            <td> 31 </td>
+            <td> Seattle </td>
+            <td> +1 222-444-6666 </td>
+            <td> 170 cm </td>
+            <td> 70 kg</td>
+            <td> A+ </td>
+            <td> None </td>
+          </tr>
+          <tr>
+            <td> Emily Wilson </td>
+            <td> December 8, 1982 </td>
+            <td> 39 </td>
+            <td> San Francisco </td>
+            <td> +1 888-999-0000 </td>
+            <td> 155 cm </td>
+            <td> 50 kg </td>
+            <td> O- </td>
+            <td> High Cholesterol </td>
+          </tr>
+          <tr>
+            <td> Andrew Miller </td>
+            <td> January 25, 1975 </td>
+            <td> 47 </td>
+            <td> Boston </td>
+            <td> +1 777-888-3333 </td>
+            <td> 185 cm </td>
+            <td> 90 kg </td>
+            <td> AB+ </td>
+            <td> Arthritis </td>
+          </tr>
+          <tr>
+            <td> Olivia Clark </td>
+            <td> March 30, 1998 </td>
+            <td> 23 </td>
+            <td> Houston </td>
+            <td> +1 111-222-3333 </td>
+            <td> 168 cm </td>
+            <td> 65 kg </td>
+            <td> B- </td>
+            <td> None </td>
+          </tr>
+          <tr>
+            <td> William Turner </td>
+            <td> November 18, 1987 </td>
+            <td> 34 </td>
+            <td> Denver </td>
+            <td> +1 999-888-7777 </td>
+            <td> 172 cm </td>
+            <td> 78 kg </td>
+            <td> O- </td>
+            <td> High Blood Pressure </td>
+          </tr>
+          <tr>
+            <td> Ella Patterson </td>
+            <td> April 5, 1996 </td>
+            <td> 25 </td>
+            <td> Phoenix </td>
+            <td> +1 555-777-1111 </td>
+            <td> 163 cm </td>
+            <td> 57 kg </td>
+            <td> A- </td>
+            <td> Migraine </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="medication">
+      
+    </section>
+  </main>
+  
+  <footer>
+    <p> Web Designer: Lawrence Go </p>
+    <p> &copy; 2023 Your Health System </p>
+  </footer>
+  
+</body>
+</html>
+
+<script type="text/javascript">
+  let slideIndex = 1;
+  showSlide(slideIndex);
+  function currentSlide(n) {
+    showSlide(slideIndex = n);
+  }
+  function prevSlide() {
+    showSlide(slideIndex -= 1);
+  }
+  function nextSlide() {
+    showSlide(slideIndex += 1);
+  }
+  function showSlide(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+  }
+  let slideInterval = setInterval(() => {
+    nextSlide();
+  }, 3000);
+  function stopSlideInterval() {
+    clearInterval(slideInterval);
+  }
+  function restartSlideInterval() {
+    slideInterval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+  }
+</script>

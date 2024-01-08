@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Addnew </title>
+  <link rel="icon" href="Images/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+  <style type="text/css">
+        /* Styles.css */
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Times New Roman;
+      background: #e9f1fa;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+    }
+    h1 {
+      font-family: Arial;
+      font-weight: bolder;
+      color: #223e61;
+      padding-left: 5vh;
+      padding-right: 88vh;
+    }
+    .title p {
+      padding-left: 5vh;
+      color: #223e61;
+    }
+    nav ul {
+      padding-bottom: 8vh;
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 15px;
+    }
+    nav ul li a {
+      font-family: Times New Roman;
+      text-decoration: none;
+      color: #223e61;
+    }
+    h2 {
+      font-family: Arial;
+      font-size: 22pt;
+      font-weight: bolder;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      color: #223e61;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10pt;
+    }
+    footer {
+      font-family: Times New Roman;
+      font-size: 10pt;
+      text-align: center;
+      padding: 10px;
+      background-color: #00abe4;
+      color: white;
+    }
+    /* For other css designs */
+    #mainlogo {
+      height: 100px;
+      width: 100px;
+      float: left;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    #searchbar {
+    font-family: Times New Roman;
+      padding-left: 10px;
+      border: none;
+      border-radius: 180px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      outline-color: #00abe4;
+      margin-left: 10px;
+    }
+    #searchbutton {
+      height: 50px;
+      width: 50px;
+      font-family: Times New Roman;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border: none;
+      border-radius: 180px;
+      float: right;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    #prev, #next {
+      height: 30px;
+      width: 30px;
+      font-weight: bolder;
+      border: none;
+      border-radius: 6pt;
+      background: #00abe4;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    #button1 {
+      font-family: Times New Roman;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border: none;
+      border-radius: 180px;
+      background-color: #223e61;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    /* CSS for form layout */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #00abe4;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0088cc;
+    }
+  </style>
+  
+<body>
+  
+  <header>
+    <div class="logo">
+      <img id="mainlogo" src="Images/Logo.png" alt="&nbsp;Logo">
+    </div>
+    <div class="title">
+      <h1> DOC Healthtech </h1>
+      <p> Web Version 1.3 </p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Dashboard.html"> Profiles </a></li>
+        <li><a href="Medication.html"> Medication </a></li>
+        <li><a href="Diagnosis.html"> Diagnosis </a></li>
+        <li><a href="Login.html"><button id="button1"> Log Out </button></a></li>
+      </ul>
+    </nav>
+  </header>
+
+      <main>
+        <section id="dashboard">
+          <form>
+            <h2> Patient Form Profile </h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" placeholder="Enter Date of Birth">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter Age">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter Location">
+
+            <label for="contact">Contact Info:</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter Contact Info">
+
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" placeholder="Enter Height">
+
+            <label for="weight">Weight:</label>
+            <input type="text" id="weight" name="weight" placeholder="Enter Weight">
+
+            <label for="bloodtype">Blood Type:</label>
+            <input type="text" id="bloodtype" name="bloodtype" placeholder="Enter Blood Type">
+
+            <label for="conditions">Medical Conditions:</label>
+            <input type="text" id="conditions" name="conditions" placeholder="Enter Medical Conditions">
+
+            <input type="submit" value="Submit">
+          </form>
+        </section>
+      </main>
+
+  <footer>
+    <p> Web Designer: Lawrence Go </p>
+    <p> &copy; 2023 Your Health System </p>
+  </footer>
+  
+</body>
+</html>
